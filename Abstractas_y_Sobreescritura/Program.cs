@@ -10,12 +10,11 @@ namespace Abstractas_y_Sobreescritura
         /// <summary>
         /// DEGM
         /// 03/03/2026
-        /// Esta aplicación captura UN círculo, UN rectángulo y UN triángulo,
+        /// Esta aplicación captura un círculo, un rectángulo y un triángulo,
         /// luego muestra la información de cada figura y calcula los totales.
         /// </summary>
         static void Main()
         {
-            // Usamos cultura invariante para el punto decimal (3.5)
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
             var figuras = new List<Figura>();
@@ -48,7 +47,7 @@ namespace Abstractas_y_Sobreescritura
             // Validación simple de desigualdad triangular
             while (!EsTrianguloValido(ladoA, ladoB, ladoC))
             {
-                Console.WriteLine("⚠️ Los lados no forman un triángulo válido. Vuelve a introducirlos.");
+                Console.WriteLine("Los lados no forman un triángulo válido. Vuelve a introducirlos.");
                 ladoA = LeerDoublePositivo("Lado A: ");
                 ladoB = LeerDoublePositivo("Lado B: ");
                 ladoC = LeerDoublePositivo("Lado C: ");
@@ -94,11 +93,6 @@ namespace Abstractas_y_Sobreescritura
             Console.WriteLine("\nProceso terminado. Presiona una tecla para salir...");
             Console.ReadKey(true);
         }
-
-        // =======================
-        // Helpers de validación
-        // =======================
-
         static double LeerDoublePositivo(string prompt)
         {
             while (true)
